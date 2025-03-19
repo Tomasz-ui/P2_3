@@ -1,13 +1,15 @@
 
-import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
         
-        // Generate random numbers between 0 and 100
-        int a = random.nextInt(101);
-        int b = random.nextInt(101);
+        // Get user input
+        System.out.print("Podaj liczbę A: ");
+        int a = scanner.nextInt();
+        System.out.print("Podaj liczbę B: ");
+        int b = scanner.nextInt();
         
         // Calculate square roots and their sum
         double sqrtA = Math.sqrt(a);
@@ -15,8 +17,8 @@ public class Main {
         double sum = sqrtA + sqrtB;
         
         // Display results
-        System.out.println("Liczba A: " + a);
-        System.out.println("Liczba B: " + b);
         System.out.println("Suma pierwiastków: " + sum);
+        
+        scanner.close();
     }
 }
